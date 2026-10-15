@@ -7,6 +7,7 @@ import Apropos from './pages/Apropos'
 import Impact from './pages/Impact'
 import Partenaire from './pages/Partenaire'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
         <Route path='/impact' element={<Impact/>} />
         <Route path='/partenaires' element={<Partenaire/>} />
         <Route path='/contact' element={<Contact/>} />
+
+        <Route path='*' element={<NotFound/>} />
       </Routes>
     </div>
   )
