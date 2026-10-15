@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Section2() {
   const objectifs = [
@@ -57,13 +58,18 @@ export default function Section2() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-950 to-slate-900 py-16 lg:py-24 text-white">
+    <motion.section
+      initial={{ opacity: 0, y: 100 }} // État de départ (invisible et plus bas)
+      whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+      viewport={{ once: true }} // L'animation ne se joue qu'une seule fois
+      transition={{ duration: 2 }}
+      className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-950 to-slate-900 py-16 lg:py-24 text-white"
+    >
       {/* Effets lumineux décoratifs d'arrière-plan */}
       <div className="absolute -top-28 -right-28 size-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-28 -left-28 size-96 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
         {/* En-tête de la section */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-block rounded-full bg-amber-400/10 border border-amber-400/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-300">
@@ -73,7 +79,8 @@ export default function Section2() {
             Nos objectifs à 24 mois
           </h2>
           <p className="mt-4 text-base sm:text-lg text-emerald-100/80">
-            Un plan d'action mesurable et structuré pour générer un impact social et économique durable.
+            Un plan d'action mesurable et structuré pour générer un impact
+            social et économique durable.
           </p>
         </div>
 
@@ -118,8 +125,7 @@ export default function Section2() {
             </div>
           ))}
         </div>
-
       </div>
-    </section>
+    </motion.section>
   );
 }

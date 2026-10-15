@@ -1,8 +1,9 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Section1() {
   return (
-    <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+    <motion.section initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1}} className="relative overflow-hidden bg-white py-16 lg:py-24">
       {/* Conteneur principal */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
@@ -65,6 +66,6 @@ export default function Section1() {
 
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
