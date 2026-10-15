@@ -24,7 +24,7 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-6 text-slate-700 font-medium text-base">
               <li>
-                <Link to="/about" className="transition-colors hover:text-emerald-700">
+                <Link to="/apropos" className="transition-colors hover:text-emerald-700">
                   À propos
                 </Link>
               </li>
@@ -92,7 +92,7 @@ export default function Navbar() {
           <ul className="flex flex-col space-y-3 font-medium text-slate-800">
             <li>
               <Link
-                to="/about"
+                to="/apropos"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 rounded-md hover:bg-emerald-50 hover:text-emerald-700"
               >
