@@ -1,0 +1,143 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-950 text-white pt-16 pb-12 border-t border-emerald-900/40">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Grille principale du Footer */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+          
+          {/* Colonne 1 : À propos / Mission */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="inline-block size-3 rounded-full bg-amber-400"></span>
+              <h3 className="text-xl font-bold font-serif tracking-wide text-white">
+                Fondation Junior
+              </h3>
+            </div>
+            <p className="text-sm text-emerald-100/70 leading-relaxed">
+              Action pour le Bien-Être, le Développement Rural et l'Inclusion Sociale au Tchad. Transformer l'assistance en autonomie durable.
+            </p>
+          </div>
+
+          {/* Colonne 2 : Liens rapides */}
+          <div className="space-y-4">
+            <h4 className="text-base font-bold uppercase tracking-wider text-amber-400">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5 text-sm text-emerald-100/80">
+              <li>
+                <Link to="/about" className="hover:text-amber-400 transition-colors">
+                  À propos & Fondation
+                </Link>
+              </li>
+              <li>
+                <Link to="/programmes" className="hover:text-amber-400 transition-colors">
+                  Nos Programmes
+                </Link>
+              </li>
+              <li>
+                <Link to="/impact" className="hover:text-amber-400 transition-colors">
+                  Impact & Objectifs
+                </Link>
+              </li>
+              <li>
+                <Link to="/partenaires" className="hover:text-amber-400 transition-colors">
+                  Nos Partenaires
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Colonne 3 : Contacts */}
+          <div className="space-y-4">
+            <h4 className="text-base font-bold uppercase tracking-wider text-amber-400">
+              Contactez-nous
+            </h4>
+            <div className="space-y-2.5 text-sm text-emerald-100/80">
+              <p className="flex items-center gap-2">
+                <span className="text-xs text-amber-400 font-semibold">Tchad :</span>
+              </p>
+              <p>
+                <a href="tel:+23598490208" className="hover:text-amber-400 transition-colors">
+                  +235 98 49 02 08
+                </a>
+              </p>
+              <p>
+                <a href="tel:+23563737363" className="hover:text-amber-400 transition-colors">
+                  +235 63 73 73 63
+                </a>
+              </p>
+              <p className="pt-1 text-xs text-emerald-100/50">
+                N'Djamena, Tchad
+              </p>
+            </div>
+          </div>
+
+          {/* Colonne 4 : Réseaux sociaux & Action */}
+          <div className="space-y-4">
+            <h4 className="text-base font-bold uppercase tracking-wider text-amber-400">
+              Suivez-nous
+            </h4>
+            <p className="text-sm text-emerald-100/70">
+              Restez informés de nos actions sur le terrain.
+            </p>
+            <div className="flex items-center gap-3 pt-2">
+              {/* Twitter / X */}
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="rounded-full bg-white/5 p-3 text-emerald-200 border border-white/10 hover:bg-emerald-500 hover:text-white transition-all duration-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" className="fill-current">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                </svg>
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="rounded-full bg-white/5 p-3 text-emerald-200 border border-white/10 hover:bg-emerald-500 hover:text-white transition-all duration-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" className="fill-current">
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                </svg>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="rounded-full bg-white/5 p-3 text-emerald-200 border border-white/10 hover:bg-emerald-500 hover:text-white transition-all duration-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" className="fill-current">
+                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bas de page / Copyright */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-100/50 gap-4">
+          <p>© {currentYear} Fondation Junior. Tous droits réservés.</p>
+          <div className="flex gap-6">
+            <Link to="/mentions-legales" className="hover:text-emerald-300 transition-colors">
+              Mentions légales
+            </Link>
+            <Link to="/confidentialite" className="hover:text-emerald-300 transition-colors">
+              Politique de confidentialité
+            </Link>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+}
