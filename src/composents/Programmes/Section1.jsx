@@ -5,13 +5,13 @@ export default function SectionProgrammes() {
   const programmes = [
     {
       number: "01",
-      title: "Aménagement foncier et autonomie agricole",
+      title: "Tourisme durable et intégré",
       subtitle:
-        "Acquisition, découpage et viabilisation de domaines de 5 à 6 hectares et plus.",
+        "Allier la participation communautaire, les retombées économiques locales, la préservation de l'environnement et la valorisation culturelle.",
       points: [
-        "Zones de cultures vivrières et maraîchères avec irrigation solaire",
-        "Élevage et agroforesterie pour régénérer les sols",
-        "Habitats communautaires éco-responsables pour les familles",
+        "Implication active et participation des communautés locales",
+        "Valorisation du patrimoine culturel et préservation de l'environnement",
+        "Génération de retombées économiques pour un développement territorial responsable",
       ],
     },
     {
@@ -38,19 +38,20 @@ export default function SectionProgrammes() {
     },
     {
       number: "04",
-      title: "Tourisme durable et intégré",
+      title: "Aménagement foncier et autonomie agricole",
       subtitle:
-        "Allier la participation communautaire, les retombées économiques locales, la préservation de l'environnement et la valorisation culturelle.",
+        "Acquisition, découpage et viabilisation de domaines de 5 à 6 hectares et plus.",
       points: [
-        "Implication active et participation des communautés locales",
-        "Valorisation du patrimoine culturel et préservation de l'environnement",
-        "Génération de retombées économiques pour un développement territorial responsable",
+        "Zones de cultures vivrières et maraîchères avec irrigation solaire",
+        "Élevage et agroforesterie pour régénérer les sols",
+        "Habitats communautaires éco-responsables pour les familles",
       ],
     },
     {
       number: "05",
       title: "Gouvernance et conformité légale",
-      subtitle: "Une rigueur juridique et comptable exemplaire sous la supervision de Djamadjibeye Samson.",
+      subtitle:
+        "Une rigueur juridique et comptable exemplaire sous la supervision de Djamadjibeye Samson.",
       points: [
         "Rédaction conforme des statuts, règlement intérieur et charte d'éthique",
         "Comptabilité conforme aux standards SYSCOHADA/ONG",
@@ -73,7 +74,8 @@ export default function SectionProgrammes() {
             Nos programmes
           </h2>
           <p className="mt-3 text-base sm:text-lg text-emerald-100/80 max-w-2xl">
-            Cinq axes complémentaires pour un développement local durable et harmonieux
+            Cinq axes complémentaires pour un développement local durable et
+            harmonieux
           </p>
         </div>
       </motion.section>

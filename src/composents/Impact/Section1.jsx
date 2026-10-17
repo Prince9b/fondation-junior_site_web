@@ -4,34 +4,42 @@ import { motion } from "motion/react";
 export default function SectionImpact() {
   const impactData = [
     {
-      axe: "Agriculture",
-      activites: "Viabilisation de domaines de 5-6 Ha, puits solaires, semences certifiées",
-      cibles: "50 hectares aménagés • 200 ménages producteurs",
-      resultat: "Autonomie alimentaire des zones cibles & 150 tonnes de récoltes/an",
+      axe: "Tourisme durable",
+      activites:
+        "Participation communautaire, valorisation culturelle et environnementale",
+      cibles: "Sites pilotes et intégrés identifiés",
+      resultat:
+        "Retombées économiques locales et développement territorial responsable",
     },
     {
       axe: "Social",
       activites: "Recensement numérique, kits de subsistance, suivi sanitaire",
       cibles: "1 500 familles enregistrées • 500 kits distribués",
-      resultat: "Base de données vulnérabilité opérationnelle & ciblage à 100% sans erreur",
+      resultat:
+        "Base de données vulnérabilité opérationnelle & ciblage à 100% sans erreur",
     },
     {
       axe: "Éducation",
-      activites: "Ateliers numériques, micro-entrepreneuriat, édition de guides",
+      activites:
+        "Ateliers numériques, micro-entrepreneuriat, édition de guides",
       cibles: "300 jeunes formés • 15 micro-entreprises créées",
-      resultat: "Insertion professionnelle effective & réduction du chômage des jeunes",
+      resultat:
+        "Insertion professionnelle effective & réduction du chômage des jeunes",
     },
     {
-      axe: "Tourisme durable",
-      activites: "Participation communautaire, valorisation culturelle et environnementale",
-      cibles: "Sites pilotes et intégrés identifiés",
-      resultat: "Retombées économiques locales et développement territorial responsable",
+      axe: "Agriculture",
+      activites:
+        "Viabilisation de domaines de 5-6 Ha, puits solaires, semences certifiées",
+      cibles: "50 hectares aménagés • 200 ménages producteurs",
+      resultat:
+        "Autonomie alimentaire des zones cibles & 150 tonnes de récoltes/an",
     },
     {
       axe: "Gouvernance",
       activites: "Audits annuels, rapports financiers, réunions de bureau",
       cibles: "100% de conformité légale • 4 rapports trimestriels/an",
-      resultat: "Confiance renforcée des bailleurs et pérennité de la structure",
+      resultat:
+        "Confiance renforcée des bailleurs et pérennité de la structure",
     },
   ];
 
@@ -49,7 +57,8 @@ export default function SectionImpact() {
             Impact
           </h2>
           <p className="mt-3 text-base sm:text-lg text-emerald-100/80 max-w-3xl">
-            Indicateurs de performance (KPIs) et cibles prévisionnelles mesurables à 24 mois.
+            Indicateurs de performance (KPIs) et cibles prévisionnelles
+            mesurables à 24 mois.
           </p>
         </div>
       </motion.section>
@@ -64,7 +73,9 @@ export default function SectionImpact() {
                     <th className="py-5 px-6 font-bold">Axe stratégique</th>
                     <th className="py-5 px-6 font-bold">Activités majeures</th>
                     <th className="py-5 px-6 font-bold">Cibles & KPIs</th>
-                    <th className="py-5 px-6 font-bold">Résultat attendu à 24 mois</th>
+                    <th className="py-5 px-6 font-bold">
+                      Résultat attendu à 24 mois
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-stone-200/60 text-sm sm:text-base text-slate-700">
