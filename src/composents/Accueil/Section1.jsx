@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export default function Section1() {
   return (
@@ -30,7 +31,6 @@ export default function Section1() {
                 Découvrir nos programmes
               </a>
               <a
-                href="#contact"
                 className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-slate-700 shadow-sm transition-all duration-300 hover:bg-slate-50 hover:border-slate-400 hover:text-slate-900"
               >
                 Nous contacter

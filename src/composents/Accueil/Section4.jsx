@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Section4() {
   const garanties = [
@@ -22,17 +23,28 @@ export default function Section4() {
   return (
     <div className="w-full font-sans">
       {/* Première partie : Un partenariat transparent */}
-      <section className="bg-[#f5f0e6] py-16 lg:py-24 text-slate-800">
+      <motion.section
+        initial={{ opacity: 0, y: 100 }} // État de départ (invisible et plus bas)
+        whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+        viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+        transition={{ duration: 1 }}
+        className="bg-[#f5f0e6] py-16 lg:py-24 text-slate-800"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-            
             {/* Colonne Gauche : Titre, explication et jauge */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: -100 }} // État de départ (invisible et plus bas)
+              whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+              viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+              transition={{ duration: 1 }}
+            >
               <h2 className="text-3xl font-extrabold sm:text-4xl lg:text-5xl tracking-tight text-slate-900 leading-tight">
                 Un partenariat transparent et à effet de levier
               </h2>
               <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
-                La fondation apporte 20 à 25 % du budget en fonds propres et en nature : terrains et main-d'œuvre communautaire.
+                La fondation apporte 20 à 25 % du budget en fonds propres et en
+                nature : terrains et main-d'œuvre communautaire.
               </p>
 
               {/* Jauge de répartition budgétaire */}
@@ -48,10 +60,11 @@ export default function Section4() {
                   </div>
                 </div>
                 <p className="mt-2.5 text-xs text-slate-500 italic">
-                  Part moyenne pondérée du plan pluriannuel. Apport de la fondation en orange.
+                  Part moyenne pondérée du plan pluriannuel. Apport de la
+                  fondation en orange.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Colonne Droite : Cartes de garanties */}
             <div className="space-y-4">
@@ -69,19 +82,25 @@ export default function Section4() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Deuxième partie : Agissez avec nous (CTA) */}
-      <section className="bg-[#FAF8F5] py-16 lg:py-24 text-center border-t border-stone-200/50">
+      <motion.section
+        initial={{ opacity: 0, y: 100 }} // État de départ (invisible et plus bas)
+        whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+        viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+        transition={{ duration: 1 }}
+        className="bg-[#FAF8F5] py-16 lg:py-24 text-center border-t border-stone-200/50"
+      >
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl lg:text-5xl">
             Agissez avec nous
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Bailleur, partenaire, bénévole ou donateur : chaque contribution devient une terre cultivée, une famille suivie, un jeune formé.
+            Bailleur, partenaire, bénévole ou donateur : chaque contribution
+            devient une terre cultivée, une famille suivie, un jeune formé.
           </p>
 
           <div className="mt-8">
@@ -93,7 +112,7 @@ export default function Section4() {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

@@ -52,7 +52,7 @@ export default function Navbar() {
 
             {/* Bouton CTA Action */}
             <Link
-              to="/devenir-partenaire"
+              to="#"
               className="inline-flex items-center justify-center rounded-full bg-amber-400 px-5 py-2.5 text-sm font-bold text-slate-900 shadow-sm transition-all duration-300 hover:bg-amber-300 hover:shadow-md"
             >
               Devenir partenaire

@@ -1,23 +1,36 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Section3() {
   const axes = [
     {
       title: "Agriculture & Irrigation",
       description:
-        "Aménagement des terres fertiles et accès aux systèmes d'irrigation pour une production pérenne.",
+        "Aménagement de domaines de 5 à 6 ha et plus avec des systèmes d'irrigation solaire.",
       icon: (
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V11.25m0 0a3.375 3.375 0 003.375-3.375M12 11.25a3.375 3.375 0 00-3.375-3.375M12 11.25V3.75m0 0a3.375 3.375 0 013.375 3.375M12 3.75a3.375 3.375 0 00-3.375 3.375"
+          d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V11.25m0 0a3.375 3.375 0 003.375-3.375M12 11.25a3.375 3.375 0 00-3.375-3.375M12 11.25V3.75m0 0a3.375 3.375 0 013.375 3.375M12 3.75a3.375 3.375 0 00-3.375-3.375"
         />
       ),
     },
     {
-      title: "Compétences Numériques",
+      title: "Recensement & Inclusion",
       description:
-        "Formation de la jeunesse aux outils digitaux pour ouvrir de nouvelles opportunités économiques.",
+        "Registres numériques pour identifier et cibler rigoureusement les ménages vulnérables.",
+      icon: (
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 00-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0Zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0Zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0Z"
+        />
+      ),
+    },
+    {
+      title: "Éducation & Digitalisation",
+      description:
+        "Centres d'apprentissage pour former la jeunesse aux compétences du numérique et de l'entreprenariat.",
       icon: (
         <path
           strokeLinecap="round"
@@ -27,21 +40,21 @@ export default function Section3() {
       ),
     },
     {
-      title: "Autonomie Durable",
+      title: "Tourisme Durable & Intégré",
       description:
-        "Transformation de l'aide d'urgence en outils de production autonomes pour les familles.",
+        "Participation communautaire, retombées économiques locales, préservation environnementale et valorisation culturelle.",
       icon: (
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+          d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-.996l-3.869 1.934M9 6.75l-4.875 2.438c-.381.19-.622.58-.622 1.006v10.662c0 .836.88 1.38 1.628.996l3.869-1.934M9 6.75l6-3m0 0l6 3m-6-3v8.25"
         />
       ),
     },
     {
-      title: "Gouvernance Transparente",
+      title: "Gouvernance & Conformité",
       description:
-        "Gestion éthique, rigoureuse et traçable des ressources au service des communautés.",
+        "Rigueur juridique et comptable irréprochable (SYSCOHADA/ONG) pour une transparence totale.",
       icon: (
         <path
           strokeLinecap="round"
@@ -53,13 +66,21 @@ export default function Section3() {
   ];
 
   return (
-    <section className="bg-slate-50 py-16 lg:py-24 text-slate-800">
-      {/* Container Principal */}
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 2 }}
+      className="bg-slate-50 py-16 lg:py-24 text-slate-800"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
-        {/* Partie Haute : Constat & Problématique */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1 }}
+          >
             <span className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800 uppercase tracking-wide">
               Le Constat
             </span>
@@ -67,12 +88,17 @@ export default function Section3() {
               Des terres fertiles, des familles sans moyens de produire.
             </h2>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-              Face aux défis alimentaires et économiques, notre engagement consiste à fournir aux communautés locales les outils indispensables pour révéler tout le potentiel de leurs terres.
+              Face aux inégalités et aux difficultés d'accès aux ressources durables au Tchad, nous transformons l'assistance passive en un levier d'autonomie.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Points clés avec icônes */}
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1 }}
+            className="space-y-6"
+          >
             <div className="flex items-start gap-4 rounded-xl bg-white p-5 shadow-sm border border-slate-100 transition hover:shadow-md">
               <div className="shrink-0 rounded-lg bg-emerald-50 p-3 text-emerald-600">
                 <svg
@@ -92,7 +118,7 @@ export default function Section3() {
               </div>
               <div>
                 <h3 className="text-base font-semibold text-slate-900 leading-snug">
-                  Au Tchad, des milliers d'hectares restent inexploités faute d'irrigation et d'infrastructures, pendant que l'aide humanitaire est mal répartie et que les jeunes manquent d'accès aux compétences numériques.
+                  Des milliers d'hectares de terres fertiles restent inexploités par manque de viabilisation et d'infrastructures d'irrigation.
                 </h3>
               </div>
             </div>
@@ -110,31 +136,46 @@ export default function Section3() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+                    d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0Zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0Zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0Z"
                   />
                 </svg>
               </div>
               <div>
                 <h3 className="text-base font-semibold text-slate-900 leading-snug">
-                  Fondée par <span className="text-emerald-700 font-bold">Djamadjibeye Samson</span>, expert en aménagement du territoire, la Fondation Junior transforme l'assistance passive en moyens de production durables, avec une gouvernance transparente.
+                  Fondée et dirigée par{" "}
+                  <span className="text-emerald-700 font-bold">
+                    Djamadjibeye Samson
+                  </span>
+                  , expert en aménagement du territoire.
                 </h3>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Partie Basse : Les 4 axes d'intervention */}
         <div className="mt-20 pt-12 border-t border-slate-200">
-          <div className="max-w-2xl text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1 }}
+            className="max-w-2xl text-left"
+          >
             <span className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
               Nos Priorités
             </span>
             <h2 className="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">
-              Quatre axes d'intervention
+              Cinq axes d'intervention
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          >
             {axes.map((axe, index) => (
               <div
                 key={index}
@@ -160,10 +201,9 @@ export default function Section3() {
                 </p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
-
       </div>
-    </section>
+    </motion.section>
   );
 }

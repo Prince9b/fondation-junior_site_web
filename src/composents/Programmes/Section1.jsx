@@ -1,73 +1,94 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function SectionProgrammes() {
   const programmes = [
     {
       number: "01",
       title: "Aménagement foncier et autonomie agricole",
-      subtitle: "Acquisition, découpage et viabilisation de domaines de 5 à 6 hectares et plus.",
+      subtitle:
+        "Acquisition, découpage et viabilisation de domaines de 5 à 6 hectares et plus.",
       points: [
-        "Cultures vivrières et maraîchères avec irrigation solaire",
+        "Zones de cultures vivrières et maraîchères avec irrigation solaire",
         "Élevage et agroforesterie pour régénérer les sols",
-        "Habitats communautaires éco-responsables",
+        "Habitats communautaires éco-responsables pour les familles",
       ],
     },
     {
       number: "02",
       title: "Recensement, cartographie et inclusion",
-      subtitle: "Enquêtes de terrain pour identifier les bénéficiaires prioritaires.",
+      subtitle:
+        "Enquêtes de terrain rigoureuses pour identifier les bénéficiaires prioritaires.",
       points: [
-        "Registre numérique sans doublon ni détournement",
-        "Orphelins, mères célibataires, personnes âgées",
-        "Kits de subsistance et suivi sanitaire",
+        "Registre numérique pour garantir qu'aucune aide ne soit détournée ou dupliquée",
+        "Ciblage des orphelins, mères célibataires et personnes âgées",
+        "Distribution de kits de subsistance et suivi sanitaire",
       ],
     },
     {
       number: "03",
       title: "Éducation, digitalisation et jeunesse",
-      subtitle: "Centres communautaires d'apprentissage pour l'insertion professionnelle.",
+      subtitle:
+        "Centres communautaires d'apprentissage pour l'insertion socio-professionnelle.",
       points: [
-        "Commerce en ligne, bureautique, projets numériques",
-        "Alphabétisation fonctionnelle et comptabilité simplifiée",
-        "Édition de guides pratiques",
+        "Formations au commerce en ligne, bureautique et projets numériques",
+        "Alphabétisation fonctionnelle et comptabilité simplifiée pour les coopératives",
+        "Édition et distribution de guides pratiques",
       ],
     },
     {
       number: "04",
-      title: "Gouvernance et conformité légale",
-      subtitle: "Une rigueur juridique et comptable exemplaire.",
+      title: "Tourisme durable et intégré",
+      subtitle:
+        "Allier la participation communautaire, les retombées économiques locales, la préservation de l'environnement et la valorisation culturelle.",
       points: [
-        "Statuts, règlement intérieur, charte d'éthique",
-        "Comptabilité SYSCOHADA/ONG",
-        "Audits annuels et rapports trimestriels",
+        "Implication active et participation des communautés locales",
+        "Valorisation du patrimoine culturel et préservation de l'environnement",
+        "Génération de retombées économiques pour un développement territorial responsable",
+      ],
+    },
+    {
+      number: "05",
+      title: "Gouvernance et conformité légale",
+      subtitle: "Une rigueur juridique et comptable exemplaire sous la supervision de Djamadjibeye Samson.",
+      points: [
+        "Rédaction conforme des statuts, règlement intérieur et charte d'éthique",
+        "Comptabilité conforme aux standards SYSCOHADA/ONG",
+        "Audits annuels et rapports trimestriels pour renforcer la confiance des bailleurs",
       ],
     },
   ];
 
   return (
     <div className="w-full font-sans bg-[#F9F6EE]">
-      
-      {/* 1. En-tête de la section (Bandeau vert émeraude) */}
-      <section className="bg-emerald-950 py-16 lg:py-20 text-white">
+      <motion.section
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5 }}
+        className="bg-emerald-950 py-16 lg:py-20 text-white"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold sm:text-4xl lg:text-5xl tracking-tight">
-            Nos programmes 
+            Nos programmes
           </h2>
           <p className="mt-3 text-base sm:text-lg text-emerald-100/80 max-w-2xl">
-            Quatre axes complémentaires, de la terre cultivée à la gouvernance des fonds
+            Cinq axes complémentaires pour un développement local durable et harmonieux
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* 2. Liste des programmes */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
           {programmes.map((item, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8 }}
               key={index}
               className="rounded-3xl bg-white p-6 sm:p-8 shadow-sm border border-stone-200/70 transition-all duration-300 hover:shadow-md grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center"
             >
-              {/* Colonne Gauche : Numéro et Titre principal */}
               <div className="lg:col-span-5 space-y-3">
                 <span className="text-3xl sm:text-4xl font-extrabold font-serif text-[#C28E38]">
                   {item.number}
@@ -80,7 +101,6 @@ export default function SectionProgrammes() {
                 </p>
               </div>
 
-              {/* Colonne Droite : Sous-éléments / Points clés */}
               <div className="lg:col-span-7 bg-[#FAF6EE] rounded-2xl p-5 sm:p-6 border border-stone-200/50 space-y-3">
                 {item.points.map((point, pIndex) => (
                   <div key={pIndex} className="flex items-start gap-3">
@@ -91,12 +111,10 @@ export default function SectionProgrammes() {
                   </div>
                 ))}
               </div>
-
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
-
     </div>
   );
 }

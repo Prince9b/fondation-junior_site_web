@@ -1,53 +1,70 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Section1() {
   const piliers = [
     {
       title: "Autonomie",
-      description: "Donner des moyens de produire plutôt que distribuer une aide ponctuelle.",
+      description:
+        "Donner des moyens de produire plutôt que distribuer une aide ponctuelle.",
     },
     {
       title: "Transparence",
-      description: "Audits annuels, rapports trimestriels et comptes conformes SYSCOHADA/ONG.",
+      description:
+        "Audits annuels, rapports trimestriels et comptes conformes SYSCOHADA/ONG.",
     },
     {
       title: "Inclusion",
-      description: "Priorité aux orphelins, mères célibataires, personnes âgées et jeunes sans emploi.",
+      description:
+        "Priorité aux orphelins, mères célibataires, personnes âgées et jeunes sans emploi.",
     },
   ];
 
   return (
     <div className="w-full font-sans bg-[#F9F6EE]">
-      
       {/* 1. En-tête de la section (Bandeau vert) */}
-      <section className="bg-emerald-950 py-16 lg:py-20 text-white">
+      <motion.section
+        initial={{ opacity: 0, y: -100 }} // État de départ (invisible et plus bas)
+        whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+        viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+        transition={{ duration: 1 }}
+        className="bg-emerald-950 py-16 lg:py-20 text-white"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold sm:text-4xl lg:text-5xl tracking-tight">
             À propos
           </h2>
           <p className="mt-3 text-base sm:text-lg text-emerald-100/80 max-w-2xl">
-            Une organisation née du constat des inégalités et de l'accès difficile aux ressources durables au Tchad.
+            Une organisation née du constat des inégalités et de l'accès
+            difficile aux ressources durables au Tchad.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* 2. Contenu principal (Vision + Photo + Piliers + Fondateur) */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-          
           {/* Bloc Vision & Illustration */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-            
+          <motion.div
+            initial={{ opacity: 0, y: 100 }} // État de départ (invisible et plus bas)
+            whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+            viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+            transition={{ duration: 1 }}
+            className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center"
+          >
             {/* Texte de la vision */}
             <div className="space-y-4">
               <span className="inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-800">
                 Notre vision
               </span>
               <h3 className="text-3xl font-extrabold text-slate-900 sm:text-4xl tracking-tight leading-tight">
-                Transformer l'assistance humanitaire passive en levier d'autonomie économique durable.
+                Transformer l'assistance humanitaire passive en levier
+                d'autonomie économique durable.
               </h3>
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                Nous dotons les communautés rurales de moyens de production agricoles viabilisés, de formations adaptées et d'un cadre de gouvernance transparent.
+                Nous dotons les communautés rurales de moyens de production
+                agricoles viabilisés, de formations adaptées et d'un cadre de
+                gouvernance transparent.
               </p>
             </div>
 
@@ -68,15 +85,23 @@ export default function Section1() {
                   />
                 </svg> */}
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">
-                  <img src="https://images.unsplash.com/photo-1758873268695-1b55590e507a?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="" />
+                  <img
+                    src="https://images.unsplash.com/photo-1758873268695-1b55590e507a?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt=""
+                  />
                 </span>
               </div>
             </div>
-
-          </div>
+          </motion.div>
 
           {/* 3. Grille des 3 Piliers (Autonomie, Transparence, Inclusion) */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }} // État de départ (invisible et plus bas)
+            whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+            viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+            transition={{ duration: 1 }}
+            className="grid grid-cols-1 gap-6 md:grid-cols-3"
+          >
             {piliers.map((item, index) => (
               <div
                 key={index}
@@ -90,12 +115,17 @@ export default function Section1() {
                 </p>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* 4. Carte du Fondateur (Djamadjibeye Samson) */}
-          <div className="rounded-3xl bg-[#EFE9DD] border border-stone-300/70 p-6 sm:p-10 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }} // État de départ (invisible et plus bas)
+            whileInView={{ opacity: 1, y: 0 }} // État une fois visible à l'écran
+            viewport={{ once: false }} // L'animation ne se joue qu'une seule fois
+            transition={{ duration: 1 }}
+            className="rounded-3xl bg-[#EFE9DD] border border-stone-300/70 p-6 sm:p-10 shadow-sm"
+          >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              
               {/* Avatar Initiales */}
               <div className="shrink-0 size-20 rounded-full bg-emerald-900 text-white flex items-center justify-center text-2xl font-bold tracking-wider shadow-md">
                 DS
@@ -112,16 +142,15 @@ export default function Section1() {
                   </p>
                 </div>
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                  Diplômé en aménagement du territoire, il met son expertise de la structuration foncière au service de la sécurité alimentaire et de l'inclusion sociale.
+                  Diplômé en aménagement du territoire, il met son expertise de
+                  la structuration foncière au service de la sécurité
+                  alimentaire et de l'inclusion sociale.
                 </p>
               </div>
-
             </div>
-          </div>
-
+          </motion.div>
         </div>
       </section>
-
     </div>
   );
 }
